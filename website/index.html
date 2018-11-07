@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quản lý bán vé máy bay </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link href="vendor/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="vendor/2.css">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="vendor/dist/js/datepicker.min.js"></script>
+	<script src="vendor/dist/js/i18n/datepicker.en.js"></script>
+</head>
+<body class="hm-gradient">
+	<!--Navbar -->
+	<nav class="mb-4 navbar navbar-expand-lg navbar-dark red darken-2">
+		<a class="navbar-brand font-bold" href="#">F-Wolf</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText1" aria-controls="navbarText1" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarText1">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link waves-effect waves-light" href="index.html">Trang chủ<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link waves-effect waves-light" href="promotion.html">Tin khuyến mại</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link waves-effect waves-light" href="#">Vé giá tốt</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link waves-effect waves-light" href="#">Liên hệ</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="nav-item dropdown">
+					<a href="#" class="nav-link waves-effect waves-light dropdown-toggle" data-toggle="dropdown"><b>Đăng nhập</b> </a>
+					<ul id="login-dp" class="dropdown-menu">
+						<li>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="text-center">
+										Đăng nhập
+									</div>
+									<!-- <form class="form" method="post" id="login-nav"> -->
+										<div class="form-group">
+											<label class="sr-only" for="exampleInputEmail2">Email address</label>
+											<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+										</div>
+										<div class="form-group">
+											<label class="sr-only" for="exampleInputPassword2">Password</label>
+											<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+											<div class="help-block text-right"><a href="">Quên mật khẩu?</a></div>
+										</div>
+										<div class="form-group">
+											<button type="submit" class="btn btn-warning btn-block">Đăng nhập</button>
+										</div>
+										<!-- </form> -->
+										<div class="registration">
+											<span>bạn chưa có tài khoản?</span>
+											<a href="#"><b>Đăng ký</b></a>
+										</div>
+										<div class="bottom social-buttons">
+											<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+											<a href="#" class="btn btn-tw"><i class="fa fa-google"></i> Google</a>
+										</div>
+									</div>
+								</div>
+							</li>	
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--/.Navbar -->
+		<header class="masthead text-white" style="background: url('images/onecentimets.jpg') no-repeat center center;">
+			<div class="container slider-top-text">
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<h2 class="my-heading ">Tìm và đặt vé khuyến mãi & vé giá rẻ chỉ với 3 bước đơn giản!</h2>
+						<p class="myp-slider text-center">Chọn thông tin chuyến bay</p>
+						<p class="myp text-center">Số khách hàng   |   Ngày đi ngày về    |   Loại ghế </p>
+					</div>
+				</div>
+			</div>
+		</header> <!-- end header -->
+		<div class="lienhe">
+			<button class="lienhe-header btn btn-primary float-right">
+				<span>Hỗ trợ</span>
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="lienhe-content">
+				<div class="card">
+					<div class="lienhe-content-admin">
+						<span>Chào bạn mình có thể giúp gì cho bạn?</span>
+						<img src="images/icon-user.png" alt="">
+					</div>
+					<div class="lienhe-content-admin">
+						<span>Xin vui lòng để lại thông tin hoặc liên hệ 113</span>
+						<img src="images/icon-user.png" alt="">
+					</div>
+				</div>
+				<div class="lienhe-sent">
+					<input type='text' class='input-sent form-control'/>
+					<button onclick="alert('How about gửi?')" class="btn btn-warning float-right">Gửi</button>
+				</div>
+			</div>
+		</div>
+
+		<section class="text-white">
+			<div class="container slider-top-text">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<button class="btn-title btn btn-primary">Đặt vé</button>
+							<div class="scroll-down">
+								<div class="location">
+									<div class="container">
+										<div class="row">
+											<div class="form-group col-md-3">
+												<span>Điểm khởi hành:</span>
+												<input id="localtionStart" type="text" class="form-control" placeholder="Hà Nội" data-toggle="dropdown">
+												<ul class="location-start dropdown-menu">
+													<li class="location-header">
+														<b>Chọn sân bay đi</b>
+														<span class="location-header-exit">
+															<i class="fas fa-times"></i>
+														</span>
+													</li>
+													<li class="location-center">
+														<div class="row">
+															<div class="col-6 col-md-4">
+																<ul class="side-nav page-sider-menu">
+																	<b>Miền Bắc</b>
+																	<li class="nav-item">
+																		<a  class="nav-link" href="javascript:locationStart(0)"><span>Hà Nội</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(1)"><span>Hải Phòng</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(2)"><span>Điện Biên</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(3)"><span>Thanh Hóa</span></a>
+																	</li>
+																	<b>Miền Trung</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(4)"><span>Vinh</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(5)"><span>Huế</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(6)"><span>Đồng Hới</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(7)"><span>Đà Nẵng</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(8)"><span>Tuy Hòa</span></a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-6 col-md-4">
+																<ul class="side-nav page-sider-menu">
+																	<b>Miền Nam</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(9)"><span>Hồ Chí Minh</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(10)"><span>Nha Trang</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(11)"><span>Đà Lạt</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(12)"><span>Phú Quốc</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(13)"><span>Qui Nhơn</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(14)"><span>Tam Kỳ</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(15)"><span>Cần Thơ</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(16)"><span>Côn Đảo</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(17)"><span>Ban Mê Thuột</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(18)"><span>Cà Mau</span></a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-md-4">
+																<ul class="side-nav page-sider-menu">
+																	<b>Lào</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(19)"><span>Vientiane</span></a>
+																	</li>
+																	<b>Nhật Bản</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(20)"><span>Osaka</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(21)"><span>Tokyo</span></a>
+																	</li>
+																	<b>Trung Quốc</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(22)"><span>Thượng Hải</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(23)"><span>Quảng Châu</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationStart(24)"><span>Bắc Kinh</span></a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="form-group col-md-3">
+												<span>Điểm đến:</span>
+												<input id="locationEnd" type="text" class="form-control" placeholder="Hồ Chí Minh" data-toggle="dropdown">
+												<ul class="location-start dropdown-menu">
+													<li class="location-header">
+														<b>Chọn sân bay đến</b>
+														<span class="location-header-exit">
+															<i class="fas fa-times"></i>
+														</span>
+													</li>
+													<li class="location-center">
+														<div class="row">
+															<div class="col-6 col-md-4">
+																<ul class="side-nav page-sider-menu">
+																	<b>Miền Bắc</b>
+																	<li class="nav-item">
+																		<a  class="nav-link" href="javascript:locationEnd(0)"><span>Hà Nội</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(1)"><span>Hải Phòng</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(2)"><span>Điện Biên</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(3)"><span>Thanh Hóa</span></a>
+																	</li>
+																	<b>Miền Trung</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(4)"><span>Vinh</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(5)"><span>Huế</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(6)"><span>Đồng Hới</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(7)"><span>Đà Nẵng</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(8)"><span>Tuy Hòa</span></a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-6 col-md-4">
+																<ul class="side-nav page-sider-menu">
+																	<b>Miền Nam</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(9)"><span>Hồ Chí Minh</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(10)"><span>Nha Trang</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(11)"><span>Đà Lạt</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(12)"><span>Phú Quốc</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(13)"><span>Qui Nhơn</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(14)"><span>Tam Kỳ</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(15)"><span>Cần Thơ</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(16)"><span>Côn Đảo</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(17)"><span>Ban Mê Thuột</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(18)"><span>Cà Mau</span></a>
+																	</li>
+																</ul>
+															</div>
+															<div class="col-md-4">
+																<ul class="side-nav page-sider-menu">
+																	<b>Lào</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(19)"><span>Vientiane</span></a>
+																	</li>
+																	<b>Nhật Bản</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(20)"><span>Osaka</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(21)"><span>Tokyo</span></a>
+																	</li>
+																	<b>Trung Quốc</b>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(22)"><span>Thượng Hải</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(23)"><span>Quảng Châu</span></a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="javascript:locationEnd(24)"><span>Bắc Kinh</span></a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+
+
+
+
+											<div class="form-group col-md-6">
+												<span>Số hành khách:</span>
+												<input type="text" class="form-control" placeholder="1 người lớn, 0 trẻ em, 0 em bé" data-toggle="dropdown">
+												<ul class="location-number-client dropdown-menu">
+													<li class="location-center">
+
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="row">
+											<div class="form-group col-md-3">
+												<span>Ngày đi:</span>
+												<input type='text' class='form-control datepicker-here' name="start" data-language='en' value="10/17/2018" />
+											</div>
+											<div class="form-group col-md-3">
+												<div class="form-check">
+													<label>
+														<input type="checkbox" id="check"> <span class="label-text">Khứ hồi</span>
+													</label>
+												</div>
+												<input id="dayEnd" type='text' class='form-control datepicker-here' name="start" data-language='en' value="10/17/2018" />
+											</div>
+											<div class="form-group col-md-6">
+												<span>Hạng ghế:</span>
+												<input id="chairRank" type="text" class="form-control" placeholder="Economy" data-toggle="dropdown">
+												<ul class="location-number-client dropdown-menu">
+													<li class="location-center nav-item">
+														<a class="nav-link" href="javascript:chairRank(0)"><span>Economy</span></a>
+													</li>
+													<li class="location-center nav-item">
+														<a class="nav-link" href="javascript:chairRank(1)"><span>Business</span></a>
+													</li>
+													<li class="location-center nav-item">
+														<a class="nav-link" href="javascript:chairRank(2)"><span>First Class</span></a>
+													</li>
+												</ul>
+											</div>
+										</div>	
+									</div>
+								</div>
+								<a class="btn btn-warning btn-scroll floating-arrow float-right" href="#about"><i class="fa fa-search"></i>Tìm chuyến bay</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section> <!-- end section -->
+		<br>
+		<section class="content testimonials">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 mx-auto">
+						<h3 class="text-center font-weight-bold">CÁC ĐIỂM ĐẾN LÝ TƯỞNG</h3>
+						<p class=" text-center">Các điểm đến lý tưởng và giá rẻ phù hợp</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+						<div class="card">
+							<a class="img-chitiet" href="#chitiet">
+								<img class="card-img-top h-262" src="images/hochiminh.jpg">
+								<div class="mauvang"><i class="fa fa-search"></i></div>
+							</a>
+							<div class="card-block">
+								<a href="#chitiet">
+									<h4 class="card-title text-center">HÀ NỘI -> HỒ CHÍ MINH</h4>
+								</a>
+								<div class="card-text">
+									<p>Thời gian khởi hành 20/10/2018</p>
+								</div>
+							</div>
+							<div class="card-footer">
+								<small>399.000 đ/chiều</small>
+								<a href="#" class="pull-right">Chi tiết</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+						<div class="card">
+							<a class="img-chitiet" href="#chitiet">
+								<img class="card-img-top h-262" src="images/catba.jpeg">
+								<div class="mauvang"><i class="fa fa-search"></i></div>
+							</a>
+							<div class="card-block">
+								<a href="#chitiet">
+									<h4 class="card-title text-center">HÀ NỘI -> CÁT BÀ</h4>
+								</a>
+								<div class="card-text">
+									<p>Thời gian khởi hành 19/10/2018</p>
+								</div>
+							</div>
+							<div class="card-footer">
+								<small>299.000 đ/chiều</small>
+								<a href="#" class="pull-right">Chi tiết</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+						<div class="card">
+							<a class="img-chitiet" href="#chitiet">
+								<img class="card-img-top h-262" src="images/halong.jpg">
+								<div class="mauvang"><i class="fa fa-search"></i></div>
+							</a>
+							<div class="card-block">
+								<a href="#chitiet">
+									<h4 class="card-title text-center">HÀ NỘI -> HẠ LONG</h4>
+								</a>
+								<div class="card-text">
+									<p>Thời gian khởi hành 19/10/2018</p>
+								</div>
+							</div>
+							<div class="card-footer">
+								<small>199.000 đ/chiều</small>
+								<a href="#" class="pull-right">Chi tiết</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+						<div class="card">
+							<a class="img-chitiet" href="#chitiet">
+								<img class="card-img-top h-262" src="images/hue.jpg">
+								<div class="mauvang"><i class="fa fa-search"></i></div>
+							</a>
+							<div class="card-block">
+								<a href="#chitiet">
+									<h4 class="card-title text-center">HÀ NỘI -> HUẾ</h4>
+								</a>
+								<div class="card-text">
+									<p>Thời gian khởi hành 20/10/2018</p>
+								</div>
+							</div>
+							<div class="card-footer">
+								<small>299.000 đ/chiều</small>
+								<a href="#" class="pull-right">Chi tiết</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+						<div class="card">
+							<a class="img-chitiet" href="#chitiet">
+								<img class="card-img-top h-262" src="images/nhatrang.jpg">
+								<div class="mauvang"><i class="fa fa-search"></i></div>
+							</a>
+							<div class="card-block">
+								<a href="#chitiet">
+									<h4 class="card-title text-center">HÀ NỘI -> NHA TRANG</h4>
+								</a>
+								<div class="card-text">
+									<p>Thời gian khởi hành 21/10/2018</p>
+								</div>
+							</div>
+							<div class="card-footer">
+								<small>350.000 đ/chiều</small>
+								<a href="#" class="pull-right">Chi tiết</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+						<div class="card">
+							<a class="img-chitiet" href="#chitiet">
+								<img class="card-img-top h-262" src="images/phongnha.jpg">
+								<div class="mauvang"><i class="fa fa-search"></i></div>
+							</a>
+							<div class="card-block">
+								<a href="#chitiet">
+									<h4 class="card-title text-center">HÀ NỘI -> PHONG NHA</h4>
+								</a>
+								<div class="card-text">
+									<p>Thời gian khởi hành 19/10/2018</p>
+								</div>
+							</div>
+							<div class="card-footer">
+								<small>299.000 đ/chiều</small>
+								<a href="#" class="pull-right">Chi tiết</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> <!-- end content -->
+
+		
+		<footer class="footer bg-dark">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+						<ul class="list-inline mb-2">
+							<li class="list-inline-item">
+								<a href="#">About</a>
+							</li>
+							<li class="list-inline-item">⋅</li>
+							<li class="list-inline-item">
+								<a href="#">Contact</a>
+							</li>
+							<li class="list-inline-item">⋅</li>
+							<li class="list-inline-item">
+								<a href="#">Terms of Use</a>
+							</li>
+							<li class="list-inline-item">⋅</li>
+							<li class="list-inline-item">
+								<a href="#">Privacy Policy</a>
+							</li>
+						</ul>
+						<p class="text-muted small mb-4 mb-lg-0">© Your Website 2018. All Rights Reserved.</p>
+					</div>
+					<div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+						<ul class="list-inline mb-0">
+							<li class="list-inline-item mr-3">
+								<a href="#">
+									<i class="fa fa-facebook fa-2x fa-fw"></i>
+								</a>
+							</li>
+							<li class="list-inline-item mr-3">
+								<a href="#">
+									<i class="fa fa-twitter fa-2x fa-fw"></i>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<i class="fa fa-instagram fa-2x fa-fw"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer> <!-- end footer -->
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+		<script src="vendor/2.js"></script>
+	</body>
+	</html>
