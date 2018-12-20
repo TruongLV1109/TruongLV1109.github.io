@@ -1,1 +1,0 @@
-function setHTML(selector, html) {var element = document.querySelector(selector);return element.innerHTML}
