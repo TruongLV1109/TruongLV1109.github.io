@@ -1,3 +1,10 @@
+//----------------------------------------------------------//
+// * Hellu !!! my name is Trường.                           //
+// * These are the functions that help me in the work...    //
+// * Hope you can help me develop further		            //
+// * Thanks you !!! ¯\_(ツ)_/¯   					        //
+//----------------------------------------------------------//
+
 function jsonDecode(jsonString) {
 	try {
 		return JSON.parse(jsonString);
