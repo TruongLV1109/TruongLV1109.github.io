@@ -32,7 +32,6 @@
     
         var songs = ["https://vnno-vn-5-tf-mp3-s1-zmp3.zadn.vn/0287cab2fef517ab4ee4/4725938721176572736?authen=exp=1555426623~acl=/0287cab2fef517ab4ee4/*~hmac=bc8365f902b682000620cb24d7df6404","Song2.mp3","Song3.mp3"];
         var poster = ["Poster1.jpg","Poster2.jpg","Poster3.jpg"];
-        var songNames = ["Hong nhan", "bla", "blo"];
         var songTitle = document.getElementById("songTitle");
         var fillBar = document.getElementById("fill");
         
@@ -45,7 +44,7 @@
             
             song.src = songs[currentSong];  //set the source of 0th song 
             
-            songTitle.textContent = songNames[currentSong]; // set the title of song
+            songTitle.textContent = songs[currentSong]; // set the title of song
             
             song.play();    // play the song
         }
